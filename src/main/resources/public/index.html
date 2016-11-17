@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Demo project</title>
+        <!--<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.6/css/bootstrap.css" />-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+
+    <body ng-app="myApp" ng-view="" class="container">
+        <script src="webjars/angularjs/1.4.9/angular.min.js" type="text/javascript"></script>
+        <script src="webjars/angularjs/1.4.9/angular-resource.min.js" type="text/javascript"></script>
+        <script src="webjars/angularjs/1.4.9/angular-route.min.js" type="text/javascript"></script>
+        <script src="webjars/angular-ui-bootstrap" type="text/javascript"></script>
+        <script src="webjars/rx-angular" type="text/javascript"></script>
+        <script src="js/app.js"></script>
+        <script src="js/resources/user.js"></script>
+        <script src="js/directives/userView.js"></script>
+        <script src="js/directives/usersList.js"></script>
+        <script src="js/directives/confirmClick.js"></script>
+        <script src="js/controllers/UserController.js"></script>
+        <script src="js/controllers/NewUserController.js"></script>
+        <script src="js/controllers/EditUserController.js"></script>
+
+        <div>
+            <users-list users="users"></users-list>
+        </div>
+    </body>
+</html>

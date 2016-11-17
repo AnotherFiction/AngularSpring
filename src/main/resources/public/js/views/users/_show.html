@@ -1,0 +1,22 @@
+<div>
+    <p>
+        <strong>First Name:</strong> {{ user.firstName }}
+    </p>
+    <p>
+        <strong>Last Name:</strong> {{ user.lastName }}
+    </p>
+    <p>
+        <strong>Email:</strong> {{ user.email }}
+    </p>
+    <p>
+        <strong>Date of Birth:</strong> {{ user.dateOfBirth }}
+    </p>
+
+    <button class="btn btn-info" type="button" ng-click="edit()">Edit</button>
+
+    <button class="btn btn-warning"
+            mw-confirm-click="destroy()"
+            mw-confirm-click-message="Are you sure you want to delete {{user.firstName}} {{user.lastName}}?">
+        Delete
+    </button>
+</div>

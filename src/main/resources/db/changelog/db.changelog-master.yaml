@@ -1,0 +1,130 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: kkirilov
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: date_of_birth
+                  type: timestamp
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: kkirilov
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: Barack
+              - column:
+                  name: last_name
+                  value: Obama
+              - column:
+                  name: email
+                  value: barack.obama@gmail.com
+              - column:
+                  name: date_of_birth
+                  value: 1961-08-04
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: Richard
+              - column:
+                  name: last_name
+                  value: Nixon
+              - column:
+                  name: email
+                  value: richard.nixon@gmail.com
+              - column:
+                  name: date_of_birth
+                  value: 1913-01-09
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: Franklin
+              - column:
+                  name: last_name
+                  value: Roosevelt
+              - column:
+                  name: email
+                  value: franklin.d.roosevelt@gmail.com
+              - column:
+                  name: date_of_birth
+                  value: 1882-01-30
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: Theodore
+              - column:
+                  name: last_name
+                  value: Roosevelt
+              - column:
+                  name: email
+                  value: theodore.roosevelt@gmail.com
+              - column:
+                  name: date_of_birth
+                  value: 1858-10-27
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: John
+              - column:
+                  name: last_name
+                  value: Kennedy
+              - column:
+                  name: email
+                  value: john.f.kennedy@gmail.com
+              - column:
+                  name: date_of_birth
+                  value: 1917-05-29
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: Abraham
+              - column:
+                  name: last_name
+                  value: Lincoln
+              - column:
+                  name: email
+                  value: abraham.lincoln@gmail.com
+              - column:
+                  name: date_of_birth
+                  value: 1809-02-12
