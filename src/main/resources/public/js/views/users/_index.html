@@ -1,5 +1,21 @@
+<div class="btn-group" role="group" aria-label="...">
+    <button ng-click='sort("firstName")'
+            type="button"
+            class="btn btn-default">Sort by First Name
+    </button>
+    <button ng-click='sort("lastName")'
+            type="button"
+            class="btn btn-default">Sort by Last Name</button>
+    <button ng-click='sort("email")'
+            type="button"
+            class="btn btn-default">Sort by Email</button>
+    <button ng-click='sort("dateOfBirth")'
+            type="button"
+            class="btn btn-default">Sort by Date of Birth</button>
+</div>
+
 <div class="row">
-    <div ng-repeat="user in users">
+    <div ng-repeat="user in users| orderBy:sortBy">
         <div class="user-wrapper col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <user-view user="user"/>
         </div>

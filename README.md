@@ -5,6 +5,8 @@
 `Postgres` sql database running on port `5432` with database `example` owned by user `postgres` with password `postgres`
 
 The following is the standard command for creating the db:
+
+
 ```
 create database example with owner postgres;
 ```
@@ -22,3 +24,4 @@ will install all required dependencies, run the initial database migrations on t
  - write tests using in-memory database
  - union of new_ and edit_ users_controllers 
  - introduce rx java and rx angular
+ - parse spring data validation exceptions, because the current results are not user friendly
