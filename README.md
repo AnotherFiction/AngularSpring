@@ -2,11 +2,14 @@
 
 ### Requirements:
 
-`Postgres` sql database running on port `5432` with database `example` owned by 
-  > user: postgres
-  > password: postgres
+`Postgres` sql database running on port `5432` with database `example` owned by user `postgres` with password `postgres`
 
-See: [application.yml](application.yml) for more info.
+The following is the standard command for creating the db:
+```
+create database example with owner postgres;
+```
+
+See: [application.yml](https://github.com/AnotherFiction/AngularSpring/blob/master/src/main/resources/config/application.yml) `spring.datasource` properties for more info.
 
 ### How to start development server
 
